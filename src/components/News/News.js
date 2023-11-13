@@ -16,7 +16,12 @@ const News = () => {
             <h5>Get Upto</h5>
             <h2>40% OFF</h2>
             <h4>On floor lamps</h4>
-            <button>Shop Now</button>
+            <Link
+             to='/shop'
+              className="to-shop-link-l"
+            >
+              Shop Now
+            </Link>
           </div>
         </div>
         <div className="news-view-box-r">
@@ -28,7 +33,12 @@ const News = () => {
             <h5>Flat Upto</h5>
             <h2>60% OFF</h2>
             <h4>On floor lamps</h4>
-            <button>Shop Now</button>
+            <Link
+             to='/shop'
+              className="to-shop-link-r"
+            >
+              Shop Now
+            </Link>
           </div>
         </div>
       </div>
