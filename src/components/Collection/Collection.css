@@ -27,11 +27,13 @@
 }
 .collection-box-container {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-left: 100px;
 }
 .collection-box {
   border: 3px solid #ddd;
-  width: 400px;
+  width: 300px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
