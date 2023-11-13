@@ -1,6 +1,7 @@
 .collection {
   max-width: 100%;
   margin-top: 0px;
+  overflow: hidden;
 }
 .collection-title {
   display: flex;
@@ -9,6 +10,7 @@
   background-color: #f4f4f4;
   height: 150px;
   margin-bottom: 50px;
+  margin: 0 50px;
 }
 .collection-container {
   display: flex !important;
@@ -19,6 +21,7 @@
   margin-right: 100px;
   outline: none;
   border: transparent;
+  height: 500px;
 }
 .collection-box-types {
   display: flex;
@@ -31,7 +34,7 @@
 .collection-box-types h4 {
   text-align: center;
 }
-.collection-box-types button {
+.collection-box-types .toshop-link {
   margin-left: 50px;
   width: 150px;
   margin-top: 20px;
@@ -41,8 +44,10 @@
   border: #ff5050;
   outline: #ff5050 double;
   transition: 0.5s;
+  color: #ff5050;
+  padding-top: 10px;
 }
-.collection-box-types button:hover {
+.collection-box-types .toshop-link:hover {
   background-color: #ff5050;
   outline: transparent;
   color: #fff;
