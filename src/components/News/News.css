@@ -85,15 +85,17 @@
   flex-direction: column;
   gap: 10px;
 }
-.news-view-content button {
+.news-view-content .to-shop-link-l {
   background-color: transparent;
   border: 2px solid #84807e;
   width: 150px;
   height: 50px;
   text-align: center;
   transition: 0.5s;
+  padding-top: 10px;
+  color: #84807e;
 }
-.news-view-content button:hover {
+.news-view-content .to-shop-link-l:hover {
   background-color: #84807e;
   color: #fff;
 }
@@ -105,9 +107,17 @@
 .news-view-box-r h2 {
   color: #987968;
 }
-.news-view-box-r .news-view-content button {
+.news-view-box-r .news-view-content .to-shop-link-r {
   border: 2px solid #987968;
+  padding-top: 10px;
+  background-color: transparent;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  transition: 0.5s;
+  color: #987968;
 }
-.news-view-box-r .news-view-content button:hover {
+.news-view-box-r .news-view-content .to-shop-link-r:hover {
   background-color: #987968;
+  color: #fff;
 }
