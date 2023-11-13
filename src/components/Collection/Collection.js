@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Collection.css";
+import { NavLink } from "react-router-dom";
 import { collectionData } from "../../data";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -11,6 +12,38 @@ import { useDispatch, useSelector } from "react-redux";
 const Collection = () => {
   const dispatch = useDispatch();
 
+  const [itemsData, setItemsData] = useState(collectionData);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(3);
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = itemsData.slice(firstPostIndex, lastPostIndex);
+
+  //get all cat uniqe
+  const allCategory = [...new Set(collectionData.map((i) => i.category))];
+
+  //filter by category
+  const filterbyCategory = (cat) => {
+    if (cat === "الكل") {
+      setItemsData(collectionData);
+    } else {
+      const newArr = collectionData.filter((item) => item.category === cat);
+      setItemsData(newArr);
+    }
+  };
+
+  //to filter by category
+  const onFilter = (cat) => {
+    filterbyCategory(cat);
+  };
+  
+  let pages = [];
+
+  for (let i = 1; i <= Math.ceil(6 / postsPerPage); i++) {
+    pages.push(i);
+  }
+
   return (
     <div className="collections">
       <div className="collections-title">
@@ -18,12 +51,16 @@ const Collection = () => {
       </div>
       <div className="collection-containers">
         <div className="collection-btns">
-          <button>Featured Products</button>
-          <button>New Products</button>
-          <button>Best Sellers</button>
+          {allCategory.map((cat) => (
+            <div>
+              <NavLink className="navlink-btn" onClick={() => onFilter(cat)}>
+                {cat}
+              </NavLink>
+            </div>
+          ))}
         </div>
         <div className="collection-box-container">
-          {collectionData.map((item) => (
+          {currentPosts.map((item) => (
             <div className="collection-box">
               <img src={item.img} alt="collection-img" />
               <div className="collection-box-btn">
@@ -45,6 +82,19 @@ const Collection = () => {
             </div>
           ))}
         </div>
+        <div className="pagination">
+        {pages.map((page, index) => {
+          return (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(page)}
+              className={page == currentPage ? "active" : ""}
+            >
+              {page}
+            </button>
+          );
+        })}
+      </div>
       </div>
     </div>
   );
