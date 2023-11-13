@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Shop.css";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -69,6 +69,10 @@ const Shop = () => {
   const onSize = (item) => {
     filterbySize(item);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="shop">
