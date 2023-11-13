@@ -2,8 +2,12 @@ import React from "react";
 import "./Arrivals.css";
 import { Link } from "react-router-dom";
 import { arrivalsData } from "../../data";
+import { addCart } from "../../rtk/slices/favorite-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Arrivals = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="arrivals">
       <div className="arrivals-container">
@@ -24,7 +28,9 @@ const Arrivals = () => {
                   <h5>{item.title}</h5>
                 </Link>
                 <h4>${item.price}</h4>
-                <button>Add to Wishlist</button>
+                <button onClick={() => dispatch(addCart(item))}>
+                  Add to Favorite
+                </button>
               </div>
             </div>
           ))}
