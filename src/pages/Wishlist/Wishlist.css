@@ -11,6 +11,9 @@
   height: 150px;
   margin-bottom: 50px;
 }
+.wishlist table {
+  width: 100%;
+}
 
 table,
 tr,
@@ -42,4 +45,9 @@ table button {
 table button:hover {
   background-color: #ff5050;
   color: #fff;
+}
+.no-product-para {
+  color: #ff5050;
+  margin: 20px;
+  font-size: 18px;
 }
