@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Contact.css";
 import { BiLogoTelegram } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephoneFill, BsFillClockFill } from "react-icons/bs";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="contact">
       <div className="contact-title">
