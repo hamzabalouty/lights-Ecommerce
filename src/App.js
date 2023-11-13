@@ -11,6 +11,7 @@ import Account from "./pages/Account/Account";
 import Cart from "./pages/Cart/Cart";
 import ReadPage from "./pages/ReadPage/ReadPage";
 import Shop from "./pages/Shop/Shop";
+import ProductId from "./pages/ProductId/ProductId";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/account" element={<Account />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<ProductId />} />
         <Route path="/readpage/:id" element={<ReadPage />} />
         <Route path="/shop" element={<Shop />} />
       </Routes>
