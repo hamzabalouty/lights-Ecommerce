@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Collection.css";
+import { Link } from "react-router-dom";
 
 const Collection = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="collection">
       <div className="collection-title">
@@ -14,7 +19,9 @@ const Collection = () => {
             alt="collection-img"
           />
           <h4>Best Off</h4>
-          <button>Shop Now</button>
+          <Link to="/shop" className="toshop-link">
+            Shop Now
+          </Link>
         </div>
         <div className="collection-box-types">
           <img
@@ -22,7 +29,9 @@ const Collection = () => {
             alt="collection-img"
           />
           <h4>Best Seller</h4>
-          <button>Shop Now</button>
+          <Link to="/shop" className="toshop-link">
+            Shop Now
+          </Link>
         </div>
         <div className="collection-box-types">
           <img
@@ -30,7 +39,9 @@ const Collection = () => {
             alt="collection-img"
           />
           <h4>Demand product</h4>
-          <button>Shop Now</button>
+          <Link to="/shop" className="toshop-link">
+            Shop Now
+          </Link>
         </div>
         <div className="collection-box-types">
           <img
@@ -38,7 +49,9 @@ const Collection = () => {
             alt="collection-img"
           />
           <h4>Featured</h4>
-          <button>Shop Now</button>
+          <Link to="/shop" className="toshop-link">
+            Shop Now
+          </Link>
         </div>
       </div>
     </div>
