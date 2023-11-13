@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Wishlist.css";
 import { BsFillTrashFill } from "react-icons/bs";
+import { addToCart } from "../../rtk/slices/cart-slice";
+import { deleteCart } from "../../rtk/slices/favorite-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Wishlist = () => {
+  const dispatch = useDispatch();
+  const favorite = useSelector((state) => state.favorite);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="wishlist">
       <div className="wishlist-title">
@@ -19,32 +29,42 @@ const Wishlist = () => {
           <th></th>
           <th>Remove</th>
         </tr>
-        <tr>
-          <td>
-            <img
-              src="https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0027_Layer_5_c0bd67e2-ed99-476c-953e-841ae9168cea.jpg?v=1535352367"
-              alt="table-img"
-            />
-          </td>
-          <td>
-            <p>Bed Lamp Large</p>
-          </td>
-          <td>
-            <p>$217.00</p>
-          </td>
-          <td>
-            <p>1</p>
-          </td>
-          <td>
-            <p>$217.00</p>
-          </td>
-          <td>
-            <button>Add To Cart</button>
-          </td>
-          <td>
-            <BsFillTrashFill className="remove-icon" />
-          </td>
-        </tr>
+        {favorite.length > 0 ? (
+          favorite.map((item) => (
+            <tr>
+              <td>
+                <img src={item.img} alt="table-img" />
+              </td>
+              <td>
+                <p>{item.title}</p>
+              </td>
+              <td>
+                <p>${item.price}</p>
+              </td>
+              <td>
+                <p>{item.quantity}</p>
+              </td>
+              <td>
+                <p>${item.quantity * item.price}</p>
+              </td>
+              <td>
+                <button onClick={() => dispatch(addToCart(item))}>
+                  Add To Cart
+                </button>
+              </td>
+              <td>
+                <BsFillTrashFill
+                  onClick={() => dispatch(deleteCart(item))}
+                  className="remove-icon"
+                />
+              </td>
+            </tr>
+          ))
+        ) : (
+          <p className="no-product-para">
+            No products were added to the wishlist
+          </p>
+        )}
       </table>
     </div>
   );
