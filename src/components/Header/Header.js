@@ -8,8 +8,10 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HiOutlineSearch } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiOutlineMenu } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const cart = useSelector((state) => state.cart);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
     <div className="header">
@@ -31,7 +33,7 @@ const Header = () => {
             </Link>
             <Link to="/cart" className="header-cart-link">
               <AiOutlineShoppingCart className="header-cart-icon" />
-              <p>cart 1</p>
+              <p>cart {cart.length}</p>
             </Link>
           </div>
         </div>
