@@ -2,21 +2,12 @@ import React, { useState } from "react";
 import { shopData } from "../../data";
 import { GrFavorite } from "react-icons/gr";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { ToastContainer, toast } from "react-toastify";
+import { addToCart } from "../../rtk/slices/cart-slice";
+import { addCart } from "../../rtk/slices/favorite-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 const GridCard = ({ itemsData }) => {
-  const notifyCart = () => {
-    toast.success("Added To Cart!", {
-      position: toast.POSITION.TOP_Right,
-      autoClose: 2000
-    });
-  };
-  const notifyFavorite = () => {
-    toast.success("Added To Favorite!", {
-      position: toast.POSITION.TOP_Right,
-      autoClose: 2000
-    });
-  };
+  const dispatch = useDispatch();
 
   return (
     <div className="shop-right-container">
@@ -28,17 +19,15 @@ const GridCard = ({ itemsData }) => {
               <div className="shop-right-effect">
                 <div className="shop-effect-box">
                   <GrFavorite
-                    onClick={notifyFavorite}
+                    onClick={() => dispatch(addCart(item))}
                     className="favorite-icon"
                   />
-                  <ToastContainer />
                 </div>
                 <div className="shop-effect-box">
                   <AiOutlineShoppingCart
-                    onClick={notifyCart}
+                    onClick={() => dispatch(addToCart(item))}
                     className="search-icon"
                   />
-                  <ToastContainer />
                 </div>
               </div>
             </div>
