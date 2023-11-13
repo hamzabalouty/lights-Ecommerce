@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { shopData } from "../../data";
+import { addToCart } from "../../rtk/slices/cart-slice";
+import { addCart } from "../../rtk/slices/favorite-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 const ListCard = ({ itemsData }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="shop-right-container-list">
       {itemsData.length >= 1 ? (
@@ -13,8 +18,18 @@ const ListCard = ({ itemsData }) => {
             <div className="shop-list-content">
               <p>{item.title}</p>
               <h4>${item.price}</h4>
-              <button className="btn-list">Add To Favorite</button>
-              <button className="btn-list">Add To Cart</button>
+              <button
+                onClick={() => dispatch(addCart(item))}
+                className="btn-list"
+              >
+                Add To Favorite
+              </button>
+              <button
+                onClick={() => dispatch(addToCart(item))}
+                className="btn-list"
+              >
+                Add To Cart
+              </button>
             </div>
           </div>
         ))
