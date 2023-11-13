@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Cart.css";
 import { BsFillTrashFill } from "react-icons/bs";
+import { addToCart, deleteFromCart } from "../../rtk/slices/cart-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+
+  const totalPrice = cart.reduce((acc, product) => {
+    acc += product.price * product.quantity;
+    return acc;
+  }, 0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="cart">
       <div className="cart-title">
@@ -18,35 +32,43 @@ const Cart = () => {
           <th>Total</th>
           <th>Remove</th>
         </tr>
-        <tr>
-          <td>
-            <img
-              src="https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0027_Layer_5_c0bd67e2-ed99-476c-953e-841ae9168cea.jpg?v=1535352367"
-              alt="table-img"
-            />
-          </td>
-          <td>
-            <p>Bed Lamp Large</p>
-          </td>
-          <td>
-            <p>$217.00</p>
-          </td>
-          <td>
-            <p>1</p>
-          </td>
-          <td>
-            <p>$217.00</p>
-          </td>
-          <td>
-            <BsFillTrashFill className="remove-icon" />
-          </td>
-        </tr>
+        {cart.length > 0 ? (
+          cart.map((item) => (
+            <>
+              <tr>
+                <td>
+                  <img src={item.img} alt="table-img" />
+                </td>
+                <td>
+                  <p>{item.title}</p>
+                </td>
+                <td>
+                  <p>${item.price}</p>
+                </td>
+                <td>
+                  <p>{item.quantity}</p>
+                </td>
+                <td>
+                  <p>${item.quantity * item.price}</p>
+                </td>
+                <td>
+                  <BsFillTrashFill
+                    onClick={() => dispatch(deleteFromCart(item))}
+                    className="remove-icon"
+                  />
+                </td>
+              </tr>
+            </>
+          ))
+        ) : (
+          <p className="no-product-para">No products were added to the Cart</p>
+        )}
         <tr>
           <td>
             <p>Subtotal</p>
           </td>
           <td colSpan="5">
-            <p>$217.00</p>
+            <p>${totalPrice}</p>
           </td>
         </tr>
       </table>
