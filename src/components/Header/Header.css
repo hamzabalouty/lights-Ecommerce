@@ -195,7 +195,18 @@
 }
 
 /* START RWD */
-@media (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .header {
+    max-width: 100%;
+    /* margin-right: 75px; */
+  }
+  .header-top-right {
+    /* margin-right: 50px; */
+  }
   .nav-link {
     margin-left: 50px;
     display: flex;
@@ -211,7 +222,7 @@
   }
   .header-search {
     position: absolute;
-    left: 65%;
+    left: 60%;
   }
   .header-middle-right,
   .nav-link {
@@ -262,19 +273,27 @@
   .modal-nav-link .nav-link-item {
     color: #ff5050;
   }
+  .header-bottom .nav-link {
+    margin-left: 200px !important;
+  }
 }
 
-@media (max-width: 767px) {
+@media screen and (min-width: 401px) and (max-width: 767px) {
   .header-left-contact,
+  .header-top-left,
+  .header-middle-right,
   .header-search,
   .header-bottom {
     display: none;
   }
   .header-top-right {
-    margin-right: 200px !important;
+    margin-left: 40% !important;
   }
   .header-menu-icon-top {
     opacity: 1;
+  }
+  .header-top {
+    border-bottom: none;
   }
   .header-menu-icon-top {
     font-size: 20px;
@@ -282,7 +301,7 @@
   }
   .header-modal {
     position: fixed;
-    right: 0;
+    left: 70%;
     width: 250px;
     background-color: #f6f6f6;
     height: 100%;
@@ -319,15 +338,61 @@
     color: #ff5050;
   }
 }
-@media (max-width: 600px) {
-  .header-top-right {
-    margin-left: 180px;
+@media screen and (max-width: 400px) {
+  .header-top-left,
+  .header-middle-right,
+  .header-bottom,
+  .header-search {
+    display: none;
   }
-  .header-account-link {
-    width: 100px;
+  .header-top {
+    border-bottom: none;
+  }
+  .header-top-right {
+    margin-left: 20%;
+  }
+  .header-account-link,
+  .header-cart-link {
+    width: 130px;
+    font-size: 25px;
   }
   .header-cart-link {
-    width: 100px;
+    height: 40px;
+  }
+  .header-middle {
+    margin-left: -30px;
+  }
+  .header-middle .header-menu-icon-top {
+    opacity: 1;
+    font-size: 25px;
+    margin-right: -85px !important;
+  }
+  .header {
+    position: relative;
+  }
+  .header-modal {
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    left: 275px;
+    padding: 30px;
+    background-color: #f6f6f6;
+  }
+  .modal-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-link-item {
+    transition: 0.5s;
+  }
+  .nav-link-item:hover {
+    padding-left: 10px;
+  }
+  .header-modal-list button {
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
   }
 }
 /* END RWD */
