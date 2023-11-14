@@ -188,6 +188,11 @@
   cursor: pointer;
   transition: 0.5s !important;
 }
+.nav-link li.active {
+  width: 80px;
+  text-align: center;
+  background-color: #e28787;
+}
 
 /* START RWD */
 @media (max-width: 991px) {
