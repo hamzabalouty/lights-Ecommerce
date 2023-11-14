@@ -23,3 +23,26 @@
 .footer-box p:hover {
   color: #ff5050;
 }
+
+/* START RWD */
+@media screen and (min-width: 576px) and (max-width: 991px){
+  .footer-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-box{
+    width: 45%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .footer-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-box{
+    width: 100%;
+  }
+}
+/* END RWD */
