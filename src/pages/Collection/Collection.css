@@ -52,3 +52,45 @@
   outline: transparent;
   color: #fff;
 }
+
+/* START RWD */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .collection{
+    height: 1500px;
+  }
+  .collection-container{
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .collection-box-types{
+    width: 40%;
+    background-color: #ddd;
+  }
+  .collection .toshop-link{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .collection{
+    height: 3000px;
+  }
+  .collection-container{
+    width: 100%;
+    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .collection-box-types{
+    width: 60%;
+  }
+  .collection .toshop-link{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+}
+/* END RWD */
