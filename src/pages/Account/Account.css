@@ -42,3 +42,15 @@
   background-color: #ff5050;
   color: #fff;
 }
+
+/* START RWD */
+@media screen and (max-width: 600px) {
+  .account {
+    width: 100%;
+    margin-left: 15px;
+  }
+  .account-title {
+    width: 100%;
+  }
+}
+/* END RWD */
