@@ -25,23 +25,25 @@
 }
 
 /* START RWD */
-@media screen and (min-width: 576px) and (max-width: 991px){
-  .footer-container{
-    width: 100%;
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .footer-container {
     display: flex;
     flex-wrap: wrap;
+    border-top: none;
+    width: 100%;
   }
-  .footer-box{
+  .footer-box {
     width: 45%;
   }
 }
 @media screen and (max-width: 575px) {
-  .footer-container{
+  .footer-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    border-top: none;
   }
-  .footer-box{
+  .footer-box {
     width: 100%;
   }
 }
