@@ -2,7 +2,6 @@
   max-width: 100%;
 }
 .carousel-inner {
-  margin-left: 50px;
   width: 1249px !important;
 }
 .carousel-inner img {
@@ -59,17 +58,19 @@
 /* START RWD */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .image-slider {
-    width: 880px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .carousel-control-prev-icon {
+    margin-left: -30%;
+    font-size: 54px;
   }
   .image-slider img {
     width: 100%;
   }
   .carousel-control-next-icon {
-    margin-right: -140px;
-    font-size: 54px;
-  }
-  .carousel-control-prev-icon {
-    margin-left: 55px;
+    margin-right: -30%;
     font-size: 54px;
   }
   .image-content {
@@ -77,35 +78,36 @@
   }
   .image-content-right {
     margin-top: -20px;
-    margin-left: -250px;
+    margin-left: -356px;
   }
 }
 @media screen and (min-width: 401px) and (max-width: 767px) {
   .image-slider {
-    width: 680px;
+    width: 95%;
+    margin-left: 5%;
+    margin-top: 5px;
   }
   .image-slider img {
     width: 100%;
   }
   .carousel-control-next-icon {
-    margin-right: -100px;
+    margin-right: -35%;
     font-size: 54px;
   }
   .carousel-control-prev-icon {
-    margin-left: 55px;
+    margin-left: -15%;
     font-size: 54px;
   }
-  .image-content {
-    margin-top: -20px;
-  }
+  .image-content,
   .image-content-right {
-    margin-top: -20px;
-    margin-left: -380px;
+    opacity: 0;
   }
 }
 @media screen and (max-width: 400px) {
   .image-slider {
-    margin-left: -25px;
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 5%;
   }
   .image-slider img {
     width: 100%;
