@@ -104,6 +104,7 @@
 .header-middle-right p {
   font-size: 15px;
   padding-top: 15px;
+  padding-right: 30px;
 }
 .header-bottom {
   width: 100%;
@@ -117,7 +118,7 @@
   padding-top: 25px;
   display: flex;
   gap: 20px;
-  margin-left: 350px !important;
+  margin-left: 30% !important;
 }
 .nav-item,
 .nav-item-last {
@@ -198,27 +199,17 @@
 
 /* START RWD */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  body {
-    max-width: 100%;
-    overflow: hidden;
-  }
   .header {
     max-width: 100%;
-    /* margin-right: 75px; */
   }
-  .header-top-right {
-    /* margin-right: 50px; */
+  .header-bottom {
+    max-width: 100%;
   }
-  .nav-link {
-    margin-left: 50px;
+  .header-bottom .nav-link {
     display: flex;
+    margin-left: 200px !important;
   }
-  .header-menu-icon {
-    display: none;
-  }
-  .nav-link li {
-    /* width: 80px; */
-  }
+
   .header-middle {
     position: relative;
   }
@@ -226,16 +217,11 @@
     position: absolute;
     left: 60%;
   }
-  .header-middle-right,
-  .nav-link {
+  .header-middle-right {
     display: none;
   }
-  .header-menu-icon {
-    opacity: 1;
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: 50%;
-    margin-top: 20px;
+  .header-bottom .nav-link {
+    padding-left: 40px;
   }
   .header-modal {
     position: fixed;
@@ -275,12 +261,12 @@
   .modal-nav-link .nav-link-item {
     color: #ff5050;
   }
-  .header-bottom .nav-link {
-    margin-left: 200px !important;
-  }
 }
 
 @media screen and (min-width: 401px) and (max-width: 767px) {
+  .header {
+    max-width: 100%;
+  }
   .header-left-contact,
   .header-top-left,
   .header-middle-right,
