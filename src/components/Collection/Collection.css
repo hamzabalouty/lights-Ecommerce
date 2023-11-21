@@ -92,21 +92,29 @@
 
 /* START RWD */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .collections {
+    max-width: 100%;
+  }
   .collections-title,
   .collection-btns {
-    margin-left: 100px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
   .collection-box-container {
-    width: 1000px;
-    margin-left: 70px;
+    width: 100%;
+    margin-left: 0px;
     display: flex;
-    gap: 30px;
+    gap: 5%;
   }
   .collection-box {
     width: 30%;
   }
   .pagination {
     margin-left: 100px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 @media screen and (min-width: 401px) and (max-width: 767px) {
@@ -142,7 +150,6 @@
     margin-left: 10%;
   }
   .collection-box-container {
-    background-color: #ddd;
     margin-left: 10px;
     width: 100%;
     display: flex;
