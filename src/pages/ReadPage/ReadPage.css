@@ -1,6 +1,5 @@
 .readpage {
   max-width: 100%;
-  margin: 0px 50px;
   overflow: hidden;
 }
 .readpage-title {
@@ -8,10 +7,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
   gap: 20px;
   height: 150px;
   margin-bottom: 50px;
+  width: 100%;
 }
 .readpage-body {
   margin-top: 70px;
