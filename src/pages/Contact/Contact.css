@@ -1,6 +1,5 @@
 .contact {
   max-width: 100%;
-  margin: 0px 50px;
 }
 .contact-title {
   display: flex;
@@ -10,6 +9,7 @@
   background-color: #f4f4f4;
   height: 150px;
   margin-bottom: 50px;
+  width: 100%;
 }
 .contact-contaitner {
   display: flex;
