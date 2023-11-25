@@ -1,6 +1,5 @@
 .wishlist {
-  max-width: 100%;
-  margin: 0px 50px;
+  width: 100%;
 }
 .wishlist-title {
   display: flex;
@@ -10,6 +9,7 @@
   background-color: #f4f4f4;
   height: 150px;
   margin-bottom: 50px;
+  width: 100%;
 }
 .wishlist table {
   width: 100% !important;
@@ -54,6 +54,13 @@ table button:hover {
 
 /* START RWD */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .wishlist {
+    max-width: 100%;
+  }
+  .wishlist-title {
+    width: 100%;
+    margin-left: -50px;
+  }
   .wishlist-table-head {
     display: none;
   }
@@ -83,6 +90,13 @@ table button:hover {
   }
 }
 @media screen and (max-width: 767px) {
+  .wishlist {
+    max-width: 100%;
+  }
+  .wishlist-title {
+    width: 100%;
+    margin-left: -50px;
+  }
   .wishlist-table-head {
     display: none;
   }
