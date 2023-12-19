@@ -6,9 +6,11 @@
   margin: 100px 50px;
 }
 .collections-title {
+  max-width: 100%;
   text-align: center;
 }
 .collection-containers {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -26,14 +28,16 @@
   margin-bottom: 20px;
 }
 .collection-box-container {
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
-  margin-left: 100px;
+  gap: 5%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .collection-box {
   border: 3px solid #ddd;
-  width: 300px;
+  width: 30%;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -101,13 +105,19 @@
   }
   .collections-title,
   .collection-btns {
-    width: 70%;
     margin-left: 15%;
     margin-right: 15%;
   }
+  .collections-title {
+    max-width: 100%;
+  }
+  .collection-btns {
+    width: 70%;
+  }
   .collection-box-container {
-    width: 100%;
-    margin-left: 0px;
+    max-width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     gap: 5%;
   }
@@ -122,20 +132,31 @@
   }
 }
 @media screen and (min-width: 401px) and (max-width: 767px) {
+  .collections,
+  .collections-title,
   .collection-box-container {
-    margin-left: 0px;
-    width: 100%;
+    max-width: 100%;
+  }
+  .collection-box-container {
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
-    gap: 50px;
+    gap: 7%;
   }
   .collection-box {
     width: 45%;
+    margin-top: 25px;
   }
 }
 @media screen and (min-width: 401px) and (max-width: 600px) {
+  .collections,
+  .collections-title,
   .collection-box-container {
-    margin-left: 0px;
-    width: 100%;
+    max-width: 100%;
+  }
+  .collection-box-container {
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
     gap: 50px;
   }
@@ -150,12 +171,16 @@
   }
 }
 @media screen and (max-width: 400px) {
+  .collections,
+  .collections-title,
+  .collection-box-container {
+    max-width: 100%;
+  }
   .collections-title {
     margin-left: 10%;
   }
   .collection-box-container {
     margin-left: 10px;
-    width: 100%;
     display: flex;
     gap: 50px;
   }
