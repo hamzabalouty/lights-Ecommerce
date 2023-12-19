@@ -1,16 +1,18 @@
 .footer {
   max-width: 100%;
   margin-top: 100px;
+  border-top: 1px solid #ddd;
 }
 .footer-container {
+  max-width: 100%;
   display: flex;
-  margin-left: 80px;
-  margin-right: 80px;
-  border-top: 1px solid #ddd;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 6%;
 }
 .footer-box {
   padding-top: 100px;
-  width: 25%;
+  width: 20%;
 }
 .footer-box h4 {
   color: #ff5050;
@@ -26,25 +28,34 @@
 
 /* START RWD */
 @media screen and (min-width: 576px) and (max-width: 991px) {
+  .footer,
+  .footer-container {
+    max-width: 100%;
+  }
   .footer-container {
     display: flex;
     flex-wrap: wrap;
     border-top: none;
-    width: 100%;
+    gap: 7%;
   }
   .footer-box {
     width: 45%;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 575px) {
+  .footer,
   .footer-container {
-    width: 100%;
+    max-width: 100%;
+  }
+  .footer-container {
     display: flex;
     flex-wrap: wrap;
     border-top: none;
   }
   .footer-box {
     width: 100%;
+    margin-top: 20px;
   }
 }
 /* END RWD */
