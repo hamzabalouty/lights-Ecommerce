@@ -3,9 +3,9 @@
   margin: 50px;
 }
 .arrivals-container {
+  max-width: 100%;
   display: flex;
-  gap: 50px;
-  width: 100%;
+  gap: 5%;
 }
 .arrivals-left {
   width: 25%;
@@ -15,17 +15,17 @@
   height: 500px;
 }
 .arrivals-right {
-  width: 75%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5%;
 }
 .arrivals-box {
   display: flex;
   gap: 10px;
-  width: 40%;
+  width: 45%;
   border: 5px solid #f6f6f6;
-  height: 30%;
+  height: auto;
 }
 .arrivals-box img {
   width: 150px;
@@ -62,9 +62,13 @@
 
 /* START RWD */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .arrivals,
+  .arrivals-container {
+    max-width: 100%;
+  }
   .arrivals-right {
     display: flex;
-    gap: 15px;
+    gap: 5%;
   }
   .arrivals-box {
     width: 45%;
@@ -81,31 +85,46 @@
   }
 }
 @media screen and (min-width: 641px) and (max-width: 767px) {
+  .arrivals,
+  .arrivals-container {
+    max-width: 100%;
+  }
   .arrivals-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
   .arrivals-left {
-    width: 60%;
+    width: 100%;
+  }
+  .arrivals-left img {
+    width: 100%;
   }
   .arrivals-right {
     display: flex;
-    gap: 30px;
+    gap: 7%;
     width: 100%;
   }
   .arrivals-box {
     width: 45%;
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 501px) and (max-width: 640px) {
+  .arrivals,
+  .arrivals-container {
+    max-width: 100%;
+  }
   .arrivals-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
   .arrivals-left {
-    width: 60%;
+    width: 100%;
+  }
+  .arrivals-left img {
+    width: 100%;
   }
   .arrivals-right {
     display: flex;
@@ -117,6 +136,10 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .arrivals,
+  .arrivals-container {
+    max-width: 100%;
+  }
   .arrivals-container {
     display: flex;
     flex-direction: column;
