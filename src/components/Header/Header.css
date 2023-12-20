@@ -116,9 +116,12 @@
   text-align: center;
   display: flex;
 }
+.header-bottom .nav-link .active {
+  color: #000;
+}
 .nav-link {
   text-align: center;
-  background-color: green;
+  transition: 0.5s ease;
   margin-top: 25px !important;
   display: flex;
   gap: 20px;
