@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Modal from "react-modal";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
@@ -150,38 +150,38 @@ const Header = () => {
               </div>
             </div>
           </Modal>
-          <div className="nav-link">
+          <nav className="nav-link">
             <li>
-              <Link to="/" className="nav-item">
+              <NavLink to="/" className="nav-item">
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/collection" className="nav-item">
+              <NavLink to="/collection" className="nav-item">
                 Collection
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/shop" className="nav-item">
+              <NavLink to="/shop" className="nav-item">
                 Shop
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/about" className="nav-item">
+              <NavLink to="/about" className="nav-item">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/contact" className="nav-item">
+              <NavLink to="/contact" className="nav-item">
                 Contact
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/wishlist" className="nav-item">
+              <NavLink to="/wishlist" className="nav-item">
                 Wishlist
-              </Link>
+              </NavLink>
             </li>
-          </div>
+          </nav>
         </div>
       </div>
     </div>
