@@ -4,6 +4,8 @@
   box-sizing: border-box;
   font-family: sans-serif;
   text-decoration: none !important;
+  max-width: 100% !important;
+  scroll-behavior: smooth;
 }
 input:focus,
 textarea:focus {
