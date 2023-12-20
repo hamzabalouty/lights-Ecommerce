@@ -5,8 +5,7 @@
   flex-direction: column;
 }
 .about-title {
-  width: 100%;
-  /* margin-left: 10px; */
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,9 +87,9 @@
 }
 .about-staff-container {
   display: flex;
-  gap: 50px;
-  margin-left: 200px;
-  margin-right: 200px;
+  gap: 5%;
+  margin-left: 100px;
+  margin-right: 100px;
   max-width: 100%;
 }
 .about-staff-box {
@@ -101,6 +100,11 @@
   width: 100%;
   border-radius: 50%;
   margin-bottom: 60px;
+  transition: 0.5s ease;
+}
+.about-staff-box:hover img {
+  transform: rotate(360deg);
+  opacity: 0.7;
 }
 .about-staff-box span {
   color: #d0d0d0;
@@ -110,7 +114,7 @@
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .about-content-details {
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 767px) {
