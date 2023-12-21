@@ -43,9 +43,17 @@
 }
 
 /* START RWD */
+@media screen and (max-width: 990px) {
+  .account .account-form {
+    max-width: 100%;
+  }
+  .account-title {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
   .account {
-    width: 100%;
+    max-width: 100%;
     margin-left: 15px;
   }
   .account-title {
