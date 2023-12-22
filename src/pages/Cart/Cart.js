@@ -24,7 +24,7 @@ const Cart = () => {
         <p>Home / Cart</p>
       </div>
       <table>
-        <tr>
+        <tr className="cart-table-head">
           <th>Image</th>
           <th>Product</th>
           <th>Price</th>
@@ -35,7 +35,7 @@ const Cart = () => {
         {cart.length > 0 ? (
           cart.map((item) => (
             <>
-              <tr>
+              <tr className="cart-table-body">
                 <td>
                   <img src={item.img} alt="table-img" />
                 </td>
@@ -63,7 +63,7 @@ const Cart = () => {
         ) : (
           <p className="no-product-para">No products were added to the Cart</p>
         )}
-        <tr>
+        <tr className="cart-table-subtotal">
           <td>
             <p>Subtotal</p>
           </td>
