@@ -1,5 +1,5 @@
 .wishlist {
-  width: 100%;
+  max-width: 100%;
 }
 .wishlist-title {
   display: flex;
@@ -8,13 +8,16 @@
   align-items: center;
   background-color: #f4f4f4;
   height: 150px;
-  margin-bottom: 50px;
   width: 100%;
 }
 .wishlist table {
-  width: 100% !important;
+  margin: 70px 30px;
+  max-width: 100%;
 }
-
+.wishlist-table-head,
+.wishlist-table-body {
+  max-width: 100%;
+}
 table,
 tr,
 th,
@@ -54,23 +57,18 @@ table button:hover {
 
 /* START RWD */
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .wishlist {
+  .wishlist,
+  .wishlist table {
     max-width: 100%;
   }
   .wishlist-title {
     width: 100%;
-    margin-left: -50px;
   }
   .wishlist-table-head {
     display: none;
   }
-  .wishlist {
-    max-width: 100%;
-    margin-left: 50px;
-  }
   .wishlist table {
     border: none;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -78,7 +76,7 @@ table button:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 50%;
+    width: 100%;
   }
   .wishlist-table-body button {
     width: 150px;
@@ -89,24 +87,19 @@ table button:hover {
     height: 400px;
   }
 }
-@media screen and (max-width: 767px) {
-  .wishlist {
+@media screen and (min-width: 401px) and (max-width: 767px) {
+  .wishlist,
+  .wishlist table {
     max-width: 100%;
   }
   .wishlist-title {
     width: 100%;
-    margin-left: -50px;
   }
   .wishlist-table-head {
     display: none;
   }
-  .wishlist {
-    max-width: 100%;
-    margin-left: 50px;
-  }
   .wishlist table {
     border: none;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -115,6 +108,14 @@ table button:hover {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+  }
+  table,
+  tr,
+  th,
+  td {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
   }
   .wishlist-table-body button {
     width: 150px;
