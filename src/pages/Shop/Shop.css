@@ -167,25 +167,28 @@
   background-color: #ff5050;
   color: #fff;
 }
+.btn-list {
+  margin-right: 25px;
+}
 
 /* START RWD */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 401px) and (max-width: 767px) {
   .shop-container {
     display: flex;
     flex-direction: column-reverse;
     gap: 30px;
     max-width: 100%;
   }
-  .shop-left-box {
-    display: none;
-  }
   .shop-right-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    gap: 7%;
   }
-  .shop-right-box,
+  .shop-right-box {
+    width: 45%;
+    margin-top: 25px;
+  }
   .shop-right,
   .shop-right-box-effect {
     width: 100%;
@@ -203,6 +206,58 @@
     align-items: center;
     position: absolute;
     left: 45%;
+  }
+  .shop-left,
+  .shop-left-box,
+  .shop-left-title,
+  .shop-left-element {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list-grid-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .shop-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    max-width: 100%;
+  }
+  .shop-right-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-right-box {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .shop-right,
+  .shop-right-box-effect {
+    width: 100%;
+  }
+  .shop-right-box-effect img {
+    width: 100%;
+    height: 500px;
+  }
+  .shop-right-box-effect {
+    position: relative;
+  }
+  .shop-right-effect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 45%;
+  }
+  .shop-left,
+  .shop-left-box,
+  .shop-left-title,
+  .shop-left-element {
+    width: 100%;
   }
 }
 /* END RWD */
